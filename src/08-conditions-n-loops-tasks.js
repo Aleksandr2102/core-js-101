@@ -88,8 +88,10 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,1,1   =>  false
  *   10,10,10 =>  true
  */
-function isTriangle(/* a, b, c */) {
-  throw new Error('Not implemented');
+function isTriangle(a, b, c) {
+  if ((a + b) > c && (b + c) > a && (c + a) > b) {
+    return true;
+  } return false;
 }
 
 
@@ -274,8 +276,14 @@ function isCreditCardNumber(/* ccn */) {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-function getDigitalRoot(/* num */) {
-  throw new Error('Not implemented');
+function getDigitalRoot(num) {
+  const str = `${num}`;
+  let sum = 0;
+  if (str.length === 1) { return +str; }
+  for (let i = 0; i < str.length; i += 1) {
+    sum += +str[i];
+  }
+  return getDigitalRoot(sum);
 }
 
 
