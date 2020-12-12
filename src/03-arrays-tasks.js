@@ -35,13 +35,8 @@ function findElement(arr, value) {
  *    2 => [ 1, 3 ]
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
-function generateOdds(len) {
-  const arr = [];
-  let i = 1;
-  while (i < (2 * len)) {
-    arr.push(i += 2);
-  }
-  return arr;
+function generateOdds(/* len */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -255,8 +250,12 @@ function getMovingSum(/* arr */) {
  * [ 'a', 'b', 'c' , null ]  => [ "b", null ]
  * [ "a" ] => []
  */
-function getSecondItems(/* arr */) {
-  throw new Error('Not implemented');
+function getSecondItems(arr) {
+  const arr1 = [];
+  for (let i = 1; i < arr.length; i += 2) {
+    arr1.push(arr[i]);
+  }
+  return arr1;
 }
 
 
