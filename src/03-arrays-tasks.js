@@ -252,9 +252,12 @@ function getMovingSum(/* arr */) {
  */
 function getSecondItems(arr) {
   const arr1 = [];
-  for (let i = 1; i < arr.length; i += 2) {
-    arr1.push(arr[i]);
-  }
+  arr.map((currentValue, index) => {
+    if (index % 2 !== 0) {
+      arr1.push(currentValue);
+    }
+    return arr1;
+  });
   return arr1;
 }
 
